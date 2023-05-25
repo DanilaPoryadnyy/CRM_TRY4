@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Media;
+using DevExpress.XtraEditors.TextEditController.Utils;
 using FontAwesome.Sharp;
 
 namespace CRM_TRY4
@@ -104,30 +107,12 @@ namespace CRM_TRY4
         private void iconButton2_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new Orders());
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new Products());
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new Customers());
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new Marketing());
+            OpenChildForm(new Resume());
         }
         private void iconButton6_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new Settings());
+            OpenChildForm(new Students());
         }
         private void iconButton7_Click(object sender, EventArgs e)
         {
@@ -152,14 +137,49 @@ namespace CRM_TRY4
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void iconButton7_Click_1(object sender, EventArgs e)
+        
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
-        private void iconButton8_Click(object sender, EventArgs e)
+        private void MenuMain_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "managerCRMDataSet5.Student". При необходимости она может быть перемещена или удалена.
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //"SELECT COUNT(*) FROM dbo.tablename";
+
+            chart1.Series[0].XValueMember = "name";
+            chart1.Series[0].XValueMember = "name";
+
+            chart1.Series[0].XValueMember = "name";
+            chart1.Series[0].XValueMember = "name";
+        
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

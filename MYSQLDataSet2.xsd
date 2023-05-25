@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MYSQLDataSet2" targetNamespace="http://tempuri.org/MYSQLDataSet2.xsd" xmlns:mstns="http://tempuri.org/MYSQLDataSet2.xsd" xmlns="http://tempuri.org/MYSQLDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MYSQLConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MYSQLConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CRM_TRY4.Properties.Settings.GlobalReference.Default.MYSQLConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StudentTableAdapter" GeneratorDataComponentClassName="StudentTableAdapter" Name="Student" UserDataComponentName="StudentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MYSQLConnectionString (Settings)" DbObjectName="MYSQL.dbo.Student" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT STUDENTNAME, DATEOFBIRTH FROM dbo.Student</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="STUDENTNAME" DataSetColumn="STUDENTNAME" />
+              <Mapping SourceColumn="DATEOFBIRTH" DataSetColumn="DATEOFBIRTH" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Student_Additional_InfoTableAdapter" GeneratorDataComponentClassName="Student_Additional_InfoTableAdapter" Name="Student_Additional_Info" UserDataComponentName="Student_Additional_InfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MYSQLConnectionString (Settings)" DbObjectName="MYSQL.dbo.Student_Additional_Info" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ADDITIONALINFO, FOREIGNLANGUAGE FROM dbo.Student_Additional_Info</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ADDITIONALINFO" DataSetColumn="ADDITIONALINFO" />
+              <Mapping SourceColumn="FOREIGNLANGUAGE" DataSetColumn="FOREIGNLANGUAGE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MYSQLDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="MYSQLDataSet2" msprop:Generator_DataSetName="MYSQLDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Student" msprop:Generator_RowEvHandlerName="StudentRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentRowDeleted" msprop:Generator_RowDeletingName="StudentRowDeleting" msprop:Generator_RowEvArgName="StudentRowChangeEvent" msprop:Generator_TablePropName="Student" msprop:Generator_RowChangedName="StudentRowChanged" msprop:Generator_RowChangingName="StudentRowChanging" msprop:Generator_TableClassName="StudentDataTable" msprop:Generator_RowClassName="StudentRow" msprop:Generator_TableVarName="tableStudent" msprop:Generator_UserTableName="Student">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STUDENTNAME" msprop:Generator_ColumnPropNameInRow="STUDENTNAME" msprop:Generator_ColumnPropNameInTable="STUDENTNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnSTUDENTNAME" msprop:Generator_UserColumnName="STUDENTNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATEOFBIRTH" msprop:Generator_ColumnPropNameInRow="DATEOFBIRTH" msprop:Generator_ColumnPropNameInTable="DATEOFBIRTHColumn" msprop:Generator_ColumnVarNameInTable="columnDATEOFBIRTH" msprop:Generator_UserColumnName="DATEOFBIRTH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Student_Additional_Info" msprop:Generator_RowEvHandlerName="Student_Additional_InfoRowChangeEventHandler" msprop:Generator_RowDeletedName="Student_Additional_InfoRowDeleted" msprop:Generator_RowDeletingName="Student_Additional_InfoRowDeleting" msprop:Generator_RowEvArgName="Student_Additional_InfoRowChangeEvent" msprop:Generator_TablePropName="Student_Additional_Info" msprop:Generator_RowChangedName="Student_Additional_InfoRowChanged" msprop:Generator_RowChangingName="Student_Additional_InfoRowChanging" msprop:Generator_TableClassName="Student_Additional_InfoDataTable" msprop:Generator_RowClassName="Student_Additional_InfoRow" msprop:Generator_TableVarName="tableStudent_Additional_Info" msprop:Generator_UserTableName="Student_Additional_Info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ADDITIONALINFO" msprop:Generator_ColumnPropNameInRow="ADDITIONALINFO" msprop:Generator_ColumnPropNameInTable="ADDITIONALINFOColumn" msprop:Generator_ColumnVarNameInTable="columnADDITIONALINFO" msprop:Generator_UserColumnName="ADDITIONALINFO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FOREIGNLANGUAGE" msprop:Generator_ColumnPropNameInRow="FOREIGNLANGUAGE" msprop:Generator_ColumnPropNameInTable="FOREIGNLANGUAGEColumn" msprop:Generator_ColumnVarNameInTable="columnFOREIGNLANGUAGE" msprop:Generator_UserColumnName="FOREIGNLANGUAGE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

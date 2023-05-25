@@ -32,5 +32,15 @@ namespace CRM_TRY4.Properties {
                 return ((string)(this["ManagerCRMConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-KMA0UCB;Initial Catalog=MYSQL;Integrated Security=True")]
+        public string MYSQLConnectionString {
+            get {
+                return ((string)(this["MYSQLConnectionString"]));
+            }
+        }
     }
 }

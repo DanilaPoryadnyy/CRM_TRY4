@@ -36,10 +36,12 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.managerCRMDataSet = new CRM_TRY4.ManagerCRMDataSet();
-            this.usersTableAdapter = new CRM_TRY4.ManagerCRMDataSetTableAdapters.usersTableAdapter();
+            this.mYSQLDataSet = new CRM_TRY4.MYSQLDataSet();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter1 = new CRM_TRY4.MYSQLDataSetTableAdapters.usersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerCRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mYSQLDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,7 +106,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.usersBindingSource;
+            this.comboBox1.DataSource = this.usersBindingSource1;
             this.comboBox1.DisplayMember = "username";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(254, 228);
@@ -118,16 +120,25 @@
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.managerCRMDataSet;
             // 
             // managerCRMDataSet
             // 
-            this.managerCRMDataSet.DataSetName = "ManagerCRMDataSet";
-            this.managerCRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // usersTableAdapter
             // 
-            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // mYSQLDataSet
+            // 
+            this.mYSQLDataSet.DataSetName = "MYSQLDataSet";
+            this.mYSQLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.mYSQLDataSet;
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
             // 
             // Login
             // 
@@ -148,7 +159,8 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerCRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mYSQLDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,8 +174,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private ManagerCRMDataSet managerCRMDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private ManagerCRMDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private MYSQLDataSet mYSQLDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private MYSQLDataSetTableAdapters.usersTableAdapter usersTableAdapter1;
     }
 }
